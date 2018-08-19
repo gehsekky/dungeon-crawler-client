@@ -1,0 +1,6 @@
+{
+  "sitename": "dungeon-crawler",
+  "api": {
+    "baseUrl": ""
+  }
+}
