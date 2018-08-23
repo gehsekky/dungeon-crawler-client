@@ -1,6 +1,7 @@
 import { setRoom } from './room';
 import { setMove } from './move';
 import { setMoves } from './moves';
+import { setModelCache } from './modelCache';
 
 const initialState = {
   gameId: null,
@@ -74,6 +75,7 @@ export function fetchGame(gameId, history) { // eslint-disable-line no-unused-va
         dispatch(setGame(response.game.gameId, response.game.party));
         dispatch(setRoom(response.game.room));
         dispatch(setMoves(response.moves));
+        dispatch(setModelCache(response.cache));
 
         const currentMove = response.moves.sort((a, b) => {
           if (a.turn < b.turn) return 1;

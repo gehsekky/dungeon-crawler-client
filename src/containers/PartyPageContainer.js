@@ -4,6 +4,7 @@ import { fetchGame } from '../redux/modules/game';
 
 const mapStateToProps = state => ({
   party: state.game.party,
+  cacheAttributes: state.modelCache.attributes,
 });
 
 const mapDispatchToProps = dispatch => ({

@@ -35,8 +35,14 @@ class PartyPage extends React.Component {
                         {partyMember.name}
                       </Panel.Heading>
                       <Panel.Body>
-                        <p>health: {partyMember.health}</p>
-                        <p>mana: {partyMember.mana}</p>
+                        <h4><b>attributes</b></h4>
+                        {
+                          partyMember.attributes.map(attr => (
+                            <p key={attr.attributeId}>
+                              {attr.attribute.name}: {attr.value}
+                            </p>
+                          ))
+                        }
                       </Panel.Body>
                     </Panel>
                   ))
