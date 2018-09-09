@@ -101,11 +101,11 @@ GamePage.propTypes = {
   history: PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
   fetchGameInfo: PropTypes.func.isRequired,
   game: PropTypes.shape({
-    gameId: PropTypes.string,
+    gameId: PropTypes.number,
     turn: PropTypes.number,
   }),
   move: PropTypes.shape({
-    moveId: PropTypes.string,
+    moveId: PropTypes.number,
     gameId: PropTypes.number,
     roomId: PropTypes.number,
     action: PropTypes.string,

@@ -37,11 +37,11 @@ class Navbar extends React.Component {
 }
 
 Navbar.propTypes = {
-  gameId: PropTypes.string,
+  gameId: PropTypes.number,
 };
 
 Navbar.defaultProps = {
-  gameId: '',
+  gameId: null,
 };
 
 export default Navbar;

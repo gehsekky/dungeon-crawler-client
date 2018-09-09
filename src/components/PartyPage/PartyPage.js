@@ -43,6 +43,21 @@ class PartyPage extends React.Component {
                             </p>
                           ))
                         }
+                        <h4><b>inventory</b></h4>
+                        {
+                          partyMember.inventory.map(partyMemberItem => (
+                            <div key={partyMemberItem.itemId}>
+                              <p>{partyMemberItem.item.name}: {partyMemberItem.quantity}</p>
+                              {
+                                partyMemberItem.item.attributes.map(itemAttr => (
+                                  <p key={itemAttr.attributeId} className={styles.itemAttribute}>
+                                    {itemAttr.attribute.name}: {itemAttr.value}
+                                  </p>
+                                ))
+                              }
+                            </div>
+                          ))
+                        }
                       </Panel.Body>
                     </Panel>
                   ))
